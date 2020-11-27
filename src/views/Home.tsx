@@ -1,11 +1,16 @@
-import React, {Fragment} from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
+import { AppContext } from '../context/context';
+
 const Home: React.FC  = () => {
-    // const onChange = (e: React.FormEvent<HTMLInputElement>) => {
-    //     const value = e.currentTarget.value;
-    //     console.log(value);
-    // };
+    const context = useContext(AppContext);
+    const { user, setUser } = context;
+
+    const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+        const value = e.currentTarget.value as string;
+        setUser(value);
+    };
 
     return (
         <Fragment>
@@ -24,6 +29,8 @@ const Home: React.FC  = () => {
                             className="form-control"
                             placeholder="Your name here"
                             name='username'
+                            value={user}
+                            onChange={onChange}
                         />
                         <button className="btn-go">
                             Let's go →

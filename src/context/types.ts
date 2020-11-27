@@ -11,7 +11,3 @@ export interface ContextData {
     user: string;
     setUser: (user: string) => void;
 }
-
-export interface InitialStateType {
-    user: string;
-}
