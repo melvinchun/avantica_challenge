@@ -1,0 +1,36 @@
+body {
+  height: 100%;
+  background: linear-gradient(#FDFDFE, #F2F3F7);
+}
+
+.App {
+  height: 100%;
+  background-image: url(./assets/images/zoovu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-container h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+  
+.home-container .form-control {
+  margin-top: 40px;
+  background-color: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #ced4da !important;
+  text-align: center;
+  font-style: italic;
+}
+
+.home-container .btn-go {
+  padding: 8px 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: 1px solid #ced4da;
+  background: white;
+  color: #3E2379;
+  font-weight: bold;
+}
