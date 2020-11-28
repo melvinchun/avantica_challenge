@@ -13,7 +13,7 @@ body {
 
 .home-container h1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 800;
 }
   
 .home-container .form-control {
@@ -32,5 +32,20 @@ body {
   border: 1px solid #ced4da;
   background: white;
   color: #3E2379;
-  font-weight: bold;
+  font-weight: 800;
+}
+ 
+.header-container .greet-container h1 {
+  font-weight: 800;
+}
+
+.header-container .timer-container h1 {
+  font-weight: 400;
+  color: #3E2379;
+}
+
+.dd-text-container h1 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #A0AABB;
 }

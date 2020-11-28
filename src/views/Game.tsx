@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import { AppContext } from '../context/context';
 
 import GameHeader from '../components/GameHeader';
+import GameDragDrop from '../components/GameDragDrop';
 
 const Game: React.FC<RouteComponentProps> = ({ history }) => {
 
@@ -21,6 +22,7 @@ const Game: React.FC<RouteComponentProps> = ({ history }) => {
         <Fragment>
             <Container className="home-container min-vh-100 d-flex flex-column">
                 <GameHeader user={user} timer={timer}/>
+                <GameDragDrop />
             </Container>
         </Fragment>
     )

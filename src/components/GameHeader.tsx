@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-regular-svg-icons'
 
 interface GameHeaderProps {
     user: string;
@@ -10,15 +12,19 @@ const GameHeader: React.FC<GameHeaderProps> = ({ user, timer }) => {
 
     return (
         <Fragment>
-            <Row>
-                <Col>
-                    <h1>Good Luck {user}!</h1>
+            <Row className="header-container py-4">
+                <Col className="greet-container">
+                    <h1>Good Luck, {user}!</h1>
                 </Col>
-                <Col>
-                    <h1><i className="far fa-id-card"></i> Your Score: {timer} seconds</h1>
+                <Col className="timer-container text-right">
+                    <h1>
+                        <FontAwesomeIcon
+                            icon={faClock}
+                            color="#6AE7B2"
+                        /> Your Score: {timer} seconds
+                    </h1>
                 </Col>
             </Row>
-
         </Fragment>
     )
 }
