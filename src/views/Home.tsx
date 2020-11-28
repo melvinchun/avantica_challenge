@@ -1,16 +1,20 @@
 import React, { Fragment, useContext } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
-
 import { AppContext } from '../context/context';
 
-const Home: React.FC  = () => {
+const Home: React.FC<RouteComponentProps> = ({history}) => {
     const context = useContext(AppContext);
     const { user, setUser } = context;
 
-    const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const onChange = (e: React.FormEvent<HTMLInputElement>): void => {
         const value = e.currentTarget.value as string;
         setUser(value);
     };
+
+    const onClick = (): void => {
+        history.push('/game')
+    }
 
     return (
         <Fragment>
@@ -32,7 +36,10 @@ const Home: React.FC  = () => {
                             value={user}
                             onChange={onChange}
                         />
-                        <button className="btn-go">
+                        <button
+                            className="btn-go"
+                            onClick={onClick}
+                        >
                             Let's go →
                         </button>
                     </Col>
@@ -42,4 +49,4 @@ const Home: React.FC  = () => {
     )
 }
 
-export default Home
+export default Home;
