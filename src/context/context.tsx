@@ -4,7 +4,9 @@ import appReducer from './reducer'
 
 const initialState = {
   user: '',
-  setUser: () => null
+  timer: 0,
+  setUser: () => null,
+  setTimer: () => null
 }
  
 const AppContext = createContext<ContextData>(initialState);
@@ -19,12 +21,21 @@ const AppProvider: React.FC = ({ children }) => {
     });
   };
 
+  const setTimer = (seconds: number) => {
+    dispatch({
+      type: ActionTypes.SET_TIMER,
+      payload: seconds
+    });
+  };
+
   return (
     <AppContext.Provider 
       value={
         {
           user: state.user,
-          setUser
+          timer: state.timer,
+          setUser,
+          setTimer
         }
       }>
       {children}

@@ -1,18 +1,18 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, useRef } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import { AppContext } from '../context/context';
 
-const Home: React.FC<RouteComponentProps> = ({history}) => {
+const Home: React.FC<RouteComponentProps> = ({ history }) => {
     const context = useContext(AppContext);
-    const { user, setUser } = context;
+    const { setUser } = context;
 
-    const onChange = (e: React.FormEvent<HTMLInputElement>): void => {
-        const value = e.currentTarget.value as string;
+    const textInput = useRef<HTMLInputElement>(null);
+
+    const submitHandler = (e: React.FormEvent): void => {
+        e.preventDefault();
+        const value = textInput.current!.value;
         setUser(value);
-    };
-
-    const onClick = (): void => {
         history.push('/game')
     }
 
@@ -27,21 +27,22 @@ const Home: React.FC<RouteComponentProps> = ({history}) => {
                         xs={{offset: 0, span: 12}}
                         className="text-center"
                     >
-                        <h1>Hello friend, tell me your name...</h1>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Your name here"
-                            name='username'
-                            value={user}
-                            onChange={onChange}
-                        />
-                        <button
-                            className="btn-go"
-                            onClick={onClick}
-                        >
-                            Let's go →
-                        </button>
+                        <form onSubmit={submitHandler}>
+                            <h1>Hello friend, tell me your name...</h1>
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Your name here"
+                                name='username'
+                                ref={textInput}
+                            />
+                            <button
+                                className="btn-go"
+                                type="submit"
+                            >
+                                Let's go →
+                            </button>
+                        </form>
                     </Col>
                 </Row>
             </Container>

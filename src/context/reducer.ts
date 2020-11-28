@@ -7,6 +7,11 @@ const reducer = (state: ContextData, action: Action) => {
         ...state,
         user: action.payload as string
       };
+    case ActionTypes.SET_TIMER:
+      return {
+        ...state,
+        timer: action.payload as number
+      };
     default:
       return state;
   }
