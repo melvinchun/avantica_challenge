@@ -47,7 +47,7 @@ const GameModal: React.FC<GameModalProps> = ({ onResetGame }) => {
             </Modal.Header>
 
             <Modal.Body>
-                <p>{user}, your score: {timer} seconds</p>
+                <p>Your score: {timer} seconds</p>
             </Modal.Body>
         </Modal>
     )
