@@ -1,0 +1,37 @@
+[
+    {
+        "id": "slot-empty-1",
+        "type": "empty",
+        "correctCard": "z",
+        "correct": false,
+        "card": null
+    },
+    {
+        "id": "slot-empty-2",
+        "type": "empty",
+        "correctCard": "o",
+        "correct": false,
+        "card": null
+    },
+    {
+        "id": "slot-empty-3",
+        "type": "empty",
+        "correctCard": "o",
+        "correct": false,
+        "card": null
+    },
+    {
+        "id": "slot-empty-4",
+        "type": "empty",
+        "correctCard": "v",
+        "correct": false,
+        "card": null
+    },
+    {
+        "id": "slot-empty-5",
+        "type": "empty",
+        "correctCard": "u",
+        "correct": false,
+        "card": null
+    }
+]

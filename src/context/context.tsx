@@ -4,16 +4,23 @@ import appReducer from './reducer'
 
 const initialState = {
   user: '',
+  timerStarted: false,
   timer: 0,
+  modalDisplayed: false,
   setUser: () => null,
-  setTimer: () => null
+  startTimer: () => null,
+  resetTimer: () => null,
+  endTimer: () => null,
+  addTimer: () => null,
+  setModal: () => null
 }
  
 const AppContext = createContext<ContextData>(initialState);
 
 const AppProvider: React.FC = ({ children }) => {
+
   const [state, dispatch] = useReducer(appReducer, initialState);
-  
+
   const setUser = (user: string) => {
     dispatch({
         type: ActionTypes.SET_USER,
@@ -21,10 +28,35 @@ const AppProvider: React.FC = ({ children }) => {
     });
   };
 
-  const setTimer = (seconds: number) => {
+  const startTimer = () => {
     dispatch({
-      type: ActionTypes.SET_TIMER,
-      payload: seconds
+      type: ActionTypes.START_TIMER
+    });
+  };
+
+  const resetTimer = () => {
+    dispatch({
+      type: ActionTypes.RESET_TIMER
+    });
+  };
+
+  const endTimer = () => {
+    dispatch({
+      type: ActionTypes.END_TIMER
+    });
+  };
+
+  const addTimer = (time: number) => {
+    dispatch({
+      type: ActionTypes.ADD_TIMER,
+      payload: time
+    });
+  };
+
+  const setModal = (value: boolean) => {
+    dispatch({
+      type: ActionTypes.SET_MODAL,
+      payload: value
     });
   };
 
@@ -33,9 +65,15 @@ const AppProvider: React.FC = ({ children }) => {
       value={
         {
           user: state.user,
+          timerStarted: state.timerStarted,
           timer: state.timer,
+          modalDisplayed: state.modalDisplayed,
           setUser,
-          setTimer
+          startTimer,
+          resetTimer,
+          endTimer,
+          addTimer,
+          setModal
         }
       }>
       {children}

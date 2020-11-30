@@ -1,0 +1,47 @@
+[
+    {
+        "id": "slot-card-1",
+        "type": "card",
+        "correctCard": "any",
+        "card": {
+            "id": "game-card-1",
+            "type": "z"
+        }
+    },
+    {
+        "id": "slot-card-2",
+        "type": "card",
+        "correctCard": "any",
+        "card": {
+            "id": "game-card-2",
+            "type": "o"
+        }
+    },
+    {
+        "id": "slot-card-3",
+        "type": "card",
+        "correctCard": "any",
+        "card": {
+            "id": "game-card-3",
+            "type": "o"
+        }
+    },
+    {
+        "id": "slot-card-4",
+        "type": "card",
+        "correctCard": "any",
+        "card": {
+            "id": "game-card-4",
+            "type": "v"
+        }
+    },
+    {
+        "id": "slot-card-5",
+        "type": "card",
+        "correctCard": "any",
+        "card": {
+            "id": "game-card-5",
+            "type": "u"
+        }
+    }
+]

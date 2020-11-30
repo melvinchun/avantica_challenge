@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { AppContext } from '../context/context';
 
 const Home: React.FC<RouteComponentProps> = ({ history }) => {
+    
     const context = useContext(AppContext);
     const { setUser } = context;
 

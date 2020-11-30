@@ -7,10 +7,30 @@ const reducer = (state: ContextData, action: Action) => {
         ...state,
         user: action.payload as string
       };
-    case ActionTypes.SET_TIMER:
+    case ActionTypes.START_TIMER:
       return {
         ...state,
-        timer: action.payload as number
+        timerStarted: true,
+      };
+    case ActionTypes.RESET_TIMER:
+      return {
+        ...state,
+        timer: 0
+      };
+    case ActionTypes.END_TIMER:
+      return {
+        ...state,
+        timerStarted: false
+      };
+    case ActionTypes.ADD_TIMER:
+      return {
+        ...state,
+        timer: state.timer + (action.payload as number)
+      };
+    case ActionTypes.SET_MODAL:
+      return {
+        ...state,
+        modalDisplayed: action.payload as boolean
       };
     default:
       return state;
