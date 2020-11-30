@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 
 import { createBrowserHistory } from 'history';
 
-it('Display Header', () => {
+it('Submit Username', () => {
     const history = createBrowserHistory();
 
     render(
