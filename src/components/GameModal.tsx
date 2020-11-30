@@ -10,7 +10,7 @@ interface GameModalProps {
 const GameModal: React.FC<GameModalProps> = ({ onResetGame }) => {
 
     const context = useContext(AppContext);
-    const { timer, user, modalDisplayed, setModal } = context;
+    const { timer, modalDisplayed, setModal } = context;
 
     const [seconds, setSeconds] = useState(0);
 
