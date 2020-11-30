@@ -1,6 +1,6 @@
 # Getting Started 
 
-Are you ready to play? This is a small drag and drop puzzle game where the logo from Zoovu has been cut into pieces and needs to be fixed. For this project development the following tools where used:
+Are you ready to play? This is a small drag and drop puzzle game where the logo from Zoovu has been cut into pieces and needs to be fixed. For this project development the following tools were used:
 
 - ReactJS 
 - Typescript
