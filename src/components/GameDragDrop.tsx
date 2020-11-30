@@ -143,7 +143,10 @@ const GameDragDrop: React.FC = () => {
                 </Row>
                 <Row className="dd-text-container mt-5">
                     <Col xs={12}>
-                        <h1>...and drop them to make the logo great <span>again!</span></h1>
+                        <h1>
+                            ...and drop them to make the logo great 
+                            <span className="light-gray"> again!</span>
+                        </h1>
                     </Col>
                 </Row>
                 <Row className="dd-game-container py-5">

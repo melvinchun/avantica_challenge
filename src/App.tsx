@@ -17,7 +17,6 @@ const App: React.FC = () => {
           <Switch>
             <Route exact path='/' component={Home} history={history} />
             <Route exact path='/game' component={Game} />
-            {/* <Route component={Error404} /> */}
           </Switch>
         </div>
       </Router>

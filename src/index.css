@@ -16,6 +16,14 @@ body {
   font-weight: 800;
 }
   
+:hover, :active, :focus {
+  outline: none!important;
+  -webkit-appearance:none !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
 .home-container .form-control {
   margin-top: 40px;
   background-color: transparent !important;
@@ -71,5 +79,9 @@ body {
 
 .game-slot.dashed {
   border: 1px dashed #6AE7B2;
+}
+
+.light-gray {
+  color: #ced4da;
 }
 
