@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AppProvider } from './context/context';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';

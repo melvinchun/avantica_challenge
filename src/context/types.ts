@@ -24,3 +24,7 @@ export interface ContextData {
     addTimer: (time: number) => void;
     setModal: (value: boolean) => void;
 }
+
+export interface AppProviderProps{
+    testState?: Partial<ContextData>
+}

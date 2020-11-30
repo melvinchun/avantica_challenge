@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from 'react';
-import { ContextData, ActionTypes } from './types';
+import { ContextData, ActionTypes, AppProviderProps } from './types';
 import appReducer from './reducer'
 
-const initialState = {
+const defaultState = {
   user: '',
   timerStarted: false,
   timer: 0,
@@ -14,10 +14,15 @@ const initialState = {
   addTimer: () => null,
   setModal: () => null
 }
- 
-const AppContext = createContext<ContextData>(initialState);
 
-const AppProvider: React.FC = ({ children }) => {
+const AppContext = createContext<ContextData>(defaultState);
+
+const AppProvider: React.FC<AppProviderProps> = ({ children, testState }) => {
+
+  const initialState = {
+    ...defaultState,
+    ...testState,
+  }
 
   const [state, dispatch] = useReducer(appReducer, initialState);
 
